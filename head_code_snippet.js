@@ -34,7 +34,7 @@ let getUserInfo2 = () => {
 		if (data.logged) {
 			axios.get(`/api/users/me`).then(response => {
 				let data = response.data;
-				let metadata_billing = data.field_1;
+				// let metadata_billing = data.field_1;
 				let email = data.email;
 				if (email) {
 					// Replace any link hrefs with https://play.prodigies.com/dashboard
@@ -43,9 +43,7 @@ let getUserInfo2 = () => {
 					for (let i = 0; i < links.length; i++) {
 						// Get the href
 						let href = links[i].href;
-						// If the href is https://play.prodigies.com/dashboard, then replace it with https://prodigies.com/route-account.php
-						if (href === 'https://play.prodigies.com/dashboard' || href === 'https://play.prodigies.com/dashboard/' || href === 'https://play.prodigies.com/account' || href === 'https://play.prodigies.com/account/' || href === 'https://play.prodigies.com/account/profile' || href === 'https://play.prodigies.com/account/profile/') {
-							// Replace the href with https://prodigies.com/route-account.php
+						if (href === 'https://play.prodigies.com/account/purchases' || href === 'https://play.prodigies.com/account/purchases/') {
 							let user_id = data.id;
 							let timestamp = Date.now();
 							// links[i].href = 'https://prodigies.com/route-account.php' + '?uid=' + timestamp + '000' + user_id;
