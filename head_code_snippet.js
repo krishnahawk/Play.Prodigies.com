@@ -44,8 +44,8 @@ let getUserInfo2 = () => {
 						if (href === 'https://play.prodigies.com/account/purchases' || href === 'https://play.prodigies.com/account/purchases/') {
 							let user_id = data.id;
 							let timestamp = Date.now();
-							links[i].href = 'https://prodigies.com/route-account.php' + '?uid=' + timestamp + '000' + user_id;
-							// links[i].href = 'https://prodigies.com/route-account.php';
+							// links[i].href = 'https://prodigies.com/route-account.php' + '?uid=' + timestamp + '000' + user_id; // DISABLED BECAUSE WAS GETTING DUPLICATE UID
+							links[i].href = 'https://prodigies.com/route-account.php';
 						}
 
 						if (href === 'https://prodigies.com/route-sheet-music.php') {
