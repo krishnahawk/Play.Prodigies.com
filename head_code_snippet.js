@@ -37,9 +37,7 @@ let getUserInfo2 = () => {
 				// let metadata_billing = data.field_1;
 				let email = data.email;
 				if (email) {
-					// Replace any link hrefs with https://play.prodigies.com/dashboard
 					let links = document.querySelectorAll('a');
-					
 					for (let i = 0; i < links.length; i++) {
 						// Get the href
 						let href = links[i].href;
